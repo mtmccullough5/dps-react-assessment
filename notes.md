@@ -2,8 +2,8 @@ Time Start: 1:20 PM Sunday October 1st
 Tasks
 Part I
   Fork Repo(done) 1:30 PM
-  Beers Component()
-  client side route
+  Beers Component(done) 1:50 PM
+  client side route 
   axios call beers
   axios call breweries
   Visual cleanup

@@ -8,8 +8,10 @@ class Beers extends React.Component {
   componentDidMount() {
     axios.get('/api/all_beers')
       .then( ({ data }) => {
-        this.setState({ beers: data })
+        console.log(data.entries)
+        this.setState({ beers: data.entries })
       });
+    console.log(this.state)
   }
 
   render() {
@@ -17,7 +19,7 @@ class Beers extends React.Component {
     return (
       
       <div>
-        <p textColor={'white'}>This is Here</p>
+        <p color={'white'}>This is Here</p>
         <Divider />
           <Card.Group>    
               { beers.map( beer =>
