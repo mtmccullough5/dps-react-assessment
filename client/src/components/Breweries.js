@@ -2,28 +2,28 @@ import React from 'react';
 import { Card, Divider } from 'semantic-ui-react';
 import axios from 'axios';
 
-class Beers extends React.Component {
-  state = { beers: [] }
+class Breweries extends React.Component {
+  state = { Breweries: [] }
 
   componentDidMount() {
-    axios.get('/api/all_beers')
+    axios.get('/api/all_breweries')
       .then( ({ data }) => {
-        this.setState({ beers: data.entries })
+        this.setState({ Breweries: data.entries })
       });
   }
 
   render() {
-    let { beers } = this.state;
+    let { Breweries } = this.state;
     return (
       <div>
         <Divider />
           <Card.Group>    
-              { beers.map( beer =>
-                  <Card key={beer.id} >
+              { Breweries.map( Brewery =>
+                  <Card key={Brewery.id} >
                       <Card.Content>
                         <Divider />
                         <Card.Header>
-                          {beer.name}
+                          {Brewery.name}
                         </Card.Header>
                       </Card.Content>
                   </Card>
@@ -34,4 +34,4 @@ class Beers extends React.Component {
   }
 }
 
-export default Beers
+export default Breweries
