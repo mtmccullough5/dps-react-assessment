@@ -26,7 +26,7 @@ class Beers extends React.Component {
     this.setState({offset: offset, page: page}, () => {
       this.loadPage();
     });
-};
+  };
   render() {
     let { beers } = this.state;
     return (
