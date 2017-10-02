@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import { Card, Divider } from 'semantic-ui-react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
@@ -35,6 +36,7 @@ class Beers extends React.Component {
           <Card.Group>    
               { beers.map( ({id,name,style={}}) =>
                   <Card key={id} >
+                    <Link to={`/beer/${id}`}>
                       <Card.Content>
                         <Card.Header>
                           {name}
@@ -42,6 +44,7 @@ class Beers extends React.Component {
                         <Divider />
                           {style.short_name}
                       </Card.Content>
+                      </Link>
                   </Card>
               )};            
           </Card.Group>
