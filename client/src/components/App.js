@@ -16,7 +16,7 @@ class App extends Component {
         <NavBar />
         <Flash />
         <Switch>
-          <Route path='/beer/:id' component={Beer} />
+          <Route path='/beer/:name' component={Beer} />
           <Route path='/beers' component={Beers} />
           <Route path='/breweries' component={Breweries} />
           <Route exact path='/' component={Home} />

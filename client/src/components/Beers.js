@@ -36,7 +36,7 @@ class Beers extends React.Component {
           <Card.Group>    
               { beers.map( ({id,name,style={}}) =>
                   <Card key={id} >
-                    <Link to={`/beer/${id}`}>
+                    <Link to={`/beer/${name}`}>
                       <Card.Content>
                         <Card.Header>
                           {name}
