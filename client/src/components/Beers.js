@@ -18,13 +18,14 @@ class Beers extends React.Component {
       <div>
         <Divider />
           <Card.Group>    
-              { beers.map( beer =>
-                  <Card key={beer.id} >
+              { beers.map( ({id,name,style={}}) =>
+                  <Card key={id} >
                       <Card.Content>
-                        <Divider />
                         <Card.Header>
-                          {beer.name}
+                          {name}
                         </Card.Header>
+                        <Divider />
+                          {style.short_name}
                       </Card.Content>
                   </Card>
               )};            
